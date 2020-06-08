@@ -44,9 +44,11 @@ The script outputs to standard output, so you may want to redirect it to a file.
 
 # Convert CSV to InfluxDB line protocol format
 
+Addition to the S3 option, you can filter and download data as CSV from [openaq.org](https://openaq.org/#/countries) website.
+
 ![openaq.org's CSV download page](docs/openaq-csv-download.png)
 
-Similar to the `ndjson` conversion -- feed the CSV file to `csv2lineprotocol.py`:
+After downloading the CSV, feed the file to `csv2lineprotocol.py` like so:
 
 ```shell
 cat openaq.csv | ./csv2lineprotocol.py
@@ -59,10 +61,6 @@ cat openaq.csv | ./csv2lineprotocol.py
 - [Access OpenAQ data via a filterable SNS topic](https://medium.com/@openaq/get-faster-access-to-real-time-air-quality-data-from-around-the-world-c6f9793d5242)
 - [Using Athena to access the whole archive](https://medium.com/@openaq/how-in-the-world-do-you-access-air-quality-data-older-than-90-days-on-the-openaq-platform-8562df519ecd)
 
-## Links
-
-- [OpenAQ on AWS](https://registry.opendata.aws/openaq/) - OpenAQ's publically available S3 bucket and SNS topic informations.
-
 ## Tools
 
 - [ropensci/ropenaq](https://github.com/ropensci/ropenaq) - R package for the OpenAQ API
@@ -70,6 +68,11 @@ cat openaq.csv | ./csv2lineprotocol.py
 - [dhhagan/py-openaq](https://github.com/dhhagan/py-openaq) - Python wrapper for the OpenAQ API
 - [jackkoppa/cityaq](https://github.com/jackkoppa/cityaq) - Compare air quality for cities
 - [dolugen/openaq-browser](https://github.com/dolugen/openaq-browser) - A web client for OpenAQ API
+
+## Links
+
+- [OpenAQ on AWS](https://registry.opendata.aws/openaq/) - OpenAQ's publically available S3 bucket and SNS topic informations.
+
 
 # Contributing
 
