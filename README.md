@@ -22,6 +22,8 @@ aws s3 cp s3://openaq-fetches/realtime-gzipped/2020-06-06/ . --recursive
 
 You can go up 1 level and download the entire archive if you wish.
 
+If you prefer to not use `awscli`, take a look at this tool that uses the scraping approach: [barronh/scrapenaq](https://github.com/barronh/scrapenaq).
+
 # How big is the OpenAQ S3 bucket?
 
 ```shell
@@ -68,6 +70,7 @@ cat openaq.csv | ./csv2lineprotocol.py
 - [dhhagan/py-openaq](https://github.com/dhhagan/py-openaq) - Python wrapper for the OpenAQ API
 - [jackkoppa/cityaq](https://github.com/jackkoppa/cityaq) - Compare air quality for cities
 - [dolugen/openaq-browser](https://github.com/dolugen/openaq-browser) - A web client for OpenAQ API
+- [barronh/scrapenaq](https://github.com/barronh/scrapenaq) - Download and convert OpenAQ archived data with Pandas
 
 ## Links
 
