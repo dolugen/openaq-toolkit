@@ -2,20 +2,20 @@
 
 Collection of user guides and useful tools for working with OpenAQ data.
 
-# Download OpenAQ archive data from S3
+# Download OpenAQ archive data from S3 using `awscli`
 
 ![openaq-fetches bucket in S3 Explorer](docs/s3-explorer.png)
 
 OpenAQ stores metric data in a S3 bucket, and [it's publicly available](https://openaq-fetches.s3.amazonaws.com/index.html). One way to download from the archive is using the `aws s3` command.
 
-Prerequisites: You need a free AWS account, and have `awscli` installed and configured.
+**Prerequisites**: You need a free AWS account, and have [`awscli`](https://pypi.org/project/awscli/) installed and configured.
 
 Download a single file:
 ```shell
 aws s3 cp s3://openaq-fetches/realtime-gzipped/2020-06-06/1591476667.ndjson .
 ```
 
-Download files of 1 day:
+Download files for 1 day:
 ```shell
 aws s3 cp s3://openaq-fetches/realtime-gzipped/2020-06-06/ . --recursive
 ```
