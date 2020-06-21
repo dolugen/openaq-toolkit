@@ -3,14 +3,14 @@
 Collection of user guides, tools, and links to resources for working with OpenAQ data.
 
 <!-- vscode-markdown-toc -->
-* [Download OpenAQ archive data from S3 using `awscli`](#DownloadOpenAQarchivedatafromS3usingawscli)
-* [How big is the OpenAQ S3 bucket?](#HowbigistheOpenAQS3bucket)
-* [Convert ndjson to InfluxDB line protocol format](#ConvertndjsontoInfluxDBlineprotocolformat)
-* [Convert CSV to InfluxDB line protocol format](#ConvertCSVtoInfluxDBlineprotocolformat)
 * [Resources](#Resources)
 	* [User Guides](#UserGuides)
 	* [Tools](#Tools)
 	* [Links](#Links)
+* [Download OpenAQ archive data from S3 using `awscli`](#DownloadOpenAQarchivedatafromS3usingawscli)
+* [How big is the OpenAQ S3 bucket?](#HowbigistheOpenAQS3bucket)
+* [Convert ndjson to InfluxDB line protocol format](#ConvertndjsontoInfluxDBlineprotocolformat)
+* [Convert CSV to InfluxDB line protocol format](#ConvertCSVtoInfluxDBlineprotocolformat)
 * [Contributing](#Contributing)
 
 <!-- vscode-markdown-toc-config
@@ -19,6 +19,28 @@ Collection of user guides, tools, and links to resources for working with OpenAQ
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
+## <a name='Resources'></a>Resources
+
+### <a name='UserGuides'></a>User Guides
+
+- [Access OpenAQ data via a filterable SNS topic](https://medium.com/@openaq/get-faster-access-to-real-time-air-quality-data-from-around-the-world-c6f9793d5242)
+- [Using Athena to access the whole archive](https://medium.com/@openaq/how-in-the-world-do-you-access-air-quality-data-older-than-90-days-on-the-openaq-platform-8562df519ecd)
+
+### <a name='Tools'></a>Tools
+
+- [openaq.org](https://openaq.org) - The main OpenAQ website, contains CSV download pages and the world pollutant map.
+- [ropensci/ropenaq](https://github.com/ropensci/ropenaq) - R package for the OpenAQ API
+- [nickolasclarke/openaq](https://github.com/nickolasclarke/openaq) - JavaScript client for the OpenAQ API
+- [dhhagan/py-openaq](https://github.com/dhhagan/py-openaq) - Python wrapper for the OpenAQ API
+- [jackkoppa/cityaq](https://github.com/jackkoppa/cityaq) - Compare air quality for cities
+- [dolugen/openaq-browser](https://github.com/dolugen/openaq-browser) - A web client for OpenAQ API
+- [barronh/scrapenaq](https://github.com/barronh/scrapenaq) - Download and convert OpenAQ archived data with Pandas
+- [dolugen/openaq-swagger](https://github.com/dolugen/openaq-swagger) - OpenAPI v3 spec of OpenAQ API
+- [dolugen/sns-s3-influxdb](https://github.com/dolugen/sns-s3-influxdb) - Populate InfluxDB with air quality data
+
+### <a name='Links'></a>Links
+
+- [OpenAQ on AWS](https://registry.opendata.aws/openaq/) - OpenAQ's publically available S3 bucket and SNS topic informations.
 
 ## <a name='DownloadOpenAQarchivedatafromS3usingawscli'></a>Download OpenAQ archive data from S3 using `awscli`
 
@@ -73,30 +95,6 @@ After downloading the CSV, feed the file to `csv2lineprotocol.py` like so:
 ```shell
 cat openaq.csv | ./csv2lineprotocol.py
 ```
-
-## <a name='Resources'></a>Resources
-
-### <a name='UserGuides'></a>User Guides
-
-- [Access OpenAQ data via a filterable SNS topic](https://medium.com/@openaq/get-faster-access-to-real-time-air-quality-data-from-around-the-world-c6f9793d5242)
-- [Using Athena to access the whole archive](https://medium.com/@openaq/how-in-the-world-do-you-access-air-quality-data-older-than-90-days-on-the-openaq-platform-8562df519ecd)
-
-### <a name='Tools'></a>Tools
-
-- [openaq.org](https://openaq.org) - The main OpenAQ website, contains CSV download pages and the world pollutant map.
-- [ropensci/ropenaq](https://github.com/ropensci/ropenaq) - R package for the OpenAQ API
-- [nickolasclarke/openaq](https://github.com/nickolasclarke/openaq) - JavaScript client for the OpenAQ API
-- [dhhagan/py-openaq](https://github.com/dhhagan/py-openaq) - Python wrapper for the OpenAQ API
-- [jackkoppa/cityaq](https://github.com/jackkoppa/cityaq) - Compare air quality for cities
-- [dolugen/openaq-browser](https://github.com/dolugen/openaq-browser) - A web client for OpenAQ API
-- [barronh/scrapenaq](https://github.com/barronh/scrapenaq) - Download and convert OpenAQ archived data with Pandas
-- [dolugen/openaq-swagger](https://github.com/dolugen/openaq-swagger) - OpenAPI v3 spec of OpenAQ API
-- [dolugen/sns-s3-influxdb](https://github.com/dolugen/sns-s3-influxdb) - Populate InfluxDB with air quality data
-
-### <a name='Links'></a>Links
-
-- [OpenAQ on AWS](https://registry.opendata.aws/openaq/) - OpenAQ's publically available S3 bucket and SNS topic informations.
-
 
 ## <a name='Contributing'></a>Contributing
 
