@@ -91,6 +91,7 @@ cat openaq.csv | ./csv2lineprotocol.py
 - [dolugen/openaq-browser](https://github.com/dolugen/openaq-browser) - A web client for OpenAQ API
 - [barronh/scrapenaq](https://github.com/barronh/scrapenaq) - Download and convert OpenAQ archived data with Pandas
 - [dolugen/openaq-swagger](https://github.com/dolugen/openaq-swagger) - OpenAPI v3 spec of OpenAQ API
+- [dolugen/sns-s3-influxdb](https://github.com/dolugen/sns-s3-influxdb) - Populate InfluxDB with air quality data
 
 ### <a name='Links'></a>Links
 
