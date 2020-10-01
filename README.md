@@ -25,6 +25,7 @@ Collection of user guides, tools, and links to resources for working with OpenAQ
 
 - [Access OpenAQ data via a filterable SNS topic](https://medium.com/@openaq/get-faster-access-to-real-time-air-quality-data-from-around-the-world-c6f9793d5242)
 - [Using Athena to access the whole archive](https://medium.com/@openaq/how-in-the-world-do-you-access-air-quality-data-older-than-90-days-on-the-openaq-platform-8562df519ecd)
+- [Air Quality Collection with TimescaleDB - Sample Application](https://github.com/timescale/examples/tree/master/air-quality)
 
 ### <a name='Tools'></a>Tools
 
