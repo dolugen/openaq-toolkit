@@ -1,32 +1,25 @@
-# OpenAQ Toolkit
+# OpenAQ Toolkit <!-- omit in toc -->
 
 Collection of user guides, tools, and links to resources for working with OpenAQ data.
 
-<!-- vscode-markdown-toc -->
-* [Resources](#Resources)
-	* [User Guides](#UserGuides)
-	* [Tools](#Tools)
-	* [Links](#Links)
-* [Download OpenAQ archive data from S3 using `awscli`](#DownloadOpenAQarchivedatafromS3usingawscli)
-* [How big is the OpenAQ S3 bucket?](#HowbigistheOpenAQS3bucket)
-* [Convert ndjson to InfluxDB line protocol format](#ConvertndjsontoInfluxDBlineprotocolformat)
-* [Convert CSV to InfluxDB line protocol format](#ConvertCSVtoInfluxDBlineprotocolformat)
-* [Contributing](#Contributing)
+- [Resources](#resources)
+	- [User Guides](#user-guides)
+	- [Tools](#tools)
+	- [Links](#links)
+- [Download OpenAQ archive data from S3 using `awscli`](#download-openaq-archive-data-from-s3-using-awscli)
+- [How big is the OpenAQ S3 bucket?](#how-big-is-the-openaq-s3-bucket)
+- [Convert ndjson to InfluxDB line protocol format](#convert-ndjson-to-influxdb-line-protocol-format)
+- [Convert CSV to InfluxDB line protocol format](#convert-csv-to-influxdb-line-protocol-format)
+- [Contributing](#contributing)
 
-<!-- vscode-markdown-toc-config
-	numbering=false
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
+## Resources
 
-## <a name='Resources'></a>Resources
-
-### <a name='UserGuides'></a>User Guides
+### User Guides
 
 - [Access OpenAQ data via a filterable SNS topic](https://medium.com/@openaq/get-faster-access-to-real-time-air-quality-data-from-around-the-world-c6f9793d5242)
 - [Using Athena to access the whole archive](https://medium.com/@openaq/how-in-the-world-do-you-access-air-quality-data-older-than-90-days-on-the-openaq-platform-8562df519ecd)
 
-### <a name='Tools'></a>Tools
+### Tools
 
 - [openaq.org](https://openaq.org) - The main OpenAQ website, contains CSV download pages and the world pollutant map.
 - [ropensci/ropenaq](https://github.com/ropensci/ropenaq) - R package for the OpenAQ API
@@ -38,11 +31,11 @@ Collection of user guides, tools, and links to resources for working with OpenAQ
 - [dolugen/openaq-swagger](https://github.com/dolugen/openaq-swagger) - OpenAPI v3 spec of OpenAQ API
 - [dolugen/sns-s3-influxdb](https://github.com/dolugen/sns-s3-influxdb) - Populate InfluxDB with air quality data
 
-### <a name='Links'></a>Links
+### Links
 
 - [OpenAQ on AWS](https://registry.opendata.aws/openaq/) - OpenAQ's publically available S3 bucket and SNS topic informations.
 
-## <a name='DownloadOpenAQarchivedatafromS3usingawscli'></a>Download OpenAQ archive data from S3 using `awscli`
+## Download OpenAQ archive data from S3 using `awscli`
 
 ![openaq-fetches bucket in S3 Explorer](docs/s3-explorer.png)
 
@@ -64,7 +57,7 @@ You can go up 1 level and download the entire archive if you wish.
 
 If you prefer to not use `awscli`, take a look at this tool that uses the scraping approach: [barronh/scrapenaq](https://github.com/barronh/scrapenaq).
 
-## <a name='HowbigistheOpenAQS3bucket'></a>How big is the OpenAQ S3 bucket?
+## How big is the OpenAQ S3 bucket?
 
 ```shell
 aws s3 ls --summarize --human-readable --recursive s3://openaq-fetches
@@ -72,7 +65,7 @@ aws s3 ls --summarize --human-readable --recursive s3://openaq-fetches
 
 As of June 2020, it's **323 GB**.
 
-## <a name='ConvertndjsontoInfluxDBlineprotocolformat'></a>Convert ndjson to InfluxDB line protocol format
+## Convert ndjson to InfluxDB line protocol format
 
 The archive files in the S3 bucket are `ndjson` formatted, or *newline delimited JSON*. Meaning it's just JSON, but each line is a separate JSON object.
 
@@ -84,7 +77,7 @@ cat *.ndjson | ./ndjson2lineprotocol.py
 
 The script outputs to standard output, so you may want to redirect it to a file.
 
-## <a name='ConvertCSVtoInfluxDBlineprotocolformat'></a>Convert CSV to InfluxDB line protocol format
+## Convert CSV to InfluxDB line protocol format
 
 Addition to the S3 option, you can filter and download data as CSV from [openaq.org](https://openaq.org/#/countries) website.
 
@@ -96,6 +89,6 @@ After downloading the CSV, feed the file to `csv2lineprotocol.py` like so:
 cat openaq.csv | ./csv2lineprotocol.py
 ```
 
-## <a name='Contributing'></a>Contributing
+## Contributing
 
 Something missing or need fixing here? Please [use the issues page](https://github.com/dolugen/openaq-toolkit/issues) to submit requests and ask questions. You can also create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) with your changes.
