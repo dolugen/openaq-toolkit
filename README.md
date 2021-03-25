@@ -26,6 +26,7 @@ Collection of user guides, tools, and links to resources for working with OpenAQ
 - [ropensci/ropenaq](https://github.com/ropensci/ropenaq) - R package for the OpenAQ API
 - [nickolasclarke/openaq](https://github.com/nickolasclarke/openaq) - JavaScript client for the OpenAQ API
 - [dhhagan/py-openaq](https://github.com/dhhagan/py-openaq) - Python wrapper for the OpenAQ API
+- [openaq-postman](https://github.com/dolugen/openaq-postman) - Postman collections for working with OpenAQ API
 - [jackkoppa/cityaq](https://github.com/jackkoppa/cityaq) - Compare air quality for cities
 - [dolugen/openaq-browser](https://github.com/dolugen/openaq-browser) - A web client for OpenAQ API
 - [barronh/scrapenaq](https://github.com/barronh/scrapenaq) - Download and convert OpenAQ archived data with Pandas
